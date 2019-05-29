@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>CSS Experiment 01b</title>
+        <!-- Source: https://codepen.io/desandro/pen/XqMGRB -->
+        <style>
+
+            /* 200x200 box with thin border */
+            .scene {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #CCC;
+                margin: 40px;
+            }
+            /* panel filling the box */
+            .panel {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* red panel : define perspective in transform property */
+            .panel.one {
+                transform: perspective(400px) rotateY(45deg);
+                background: red;
+            }
+            
+            /* blue panel: define perspective sperately */
+            .scene.two {
+                perspective: 400px;
+            }
+            .panel.two {
+                background: blue;
+                transform: rotateY(45deg);
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="scene one">
+            <div class="panel one"></div>
+        </div>
+        
+        <div class="scene two">
+            <div class="panel two"></div>
+        </div>
+        
+    </body>
+</html>
+
